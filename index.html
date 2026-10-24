@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#fff8f9" />
+    <meta name="description" content="喵喵人气事务所，一场没有输家的可爱较量。" />
+    <link rel="icon" type="image/webp" href="/images/toffee.webp" />
+    <title>喵喵人气事务所 · 把偏爱投给小可爱</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">跳到候选猫咪</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="#cats" aria-label="喵喵人气事务所首页">
+          <span class="brand-mark"><i data-lucide="cat" aria-hidden="true"></i></span>
+          <span><strong>喵喵人气事务所</strong><small>MEOW VOTE CLUB</small></span>
+        </a>
+        <nav class="main-nav" aria-label="主导航">
+          <a href="#cats" data-nav="cats" class="nav-link active" aria-current="page">
+            <i data-lucide="paw-print" aria-hidden="true"></i><span>猫咪候选人</span>
+          </a>
+          <a href="#ranking" data-nav="ranking" class="nav-link">
+            <i data-lucide="trophy" aria-hidden="true"></i><span>人气榜</span>
+          </a>
+          <a href="#mine" data-nav="mine" class="nav-link">
+            <i data-lucide="heart" aria-hidden="true"></i><span>我的应援</span><b id="mine-count" hidden>0</b>
+          </a>
+        </nav>
+        <div class="header-end"><span class="demo-label"><span></span><b id="mode-label">共享投票</b></span>
+          <button class="visitor icon-button" data-action="rules" aria-label="查看应援约定" data-tip="应援约定">
+            <i data-lucide="ticket" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-shell" id="main-content">
+      <section class="intro" aria-labelledby="page-title">
+        <div class="intro-copy">
+          <div class="edition"><span class="edition-dot"></span>第 01 届 · 喵星人气选举<span class="edition-year">2026 / VOL. 01</span></div>
+          <h1 id="page-title">把偏爱，投给<span>小可爱</span><i data-lucide="sparkles" aria-hidden="true"></i></h1>
+          <p>一场没有输家的可爱较量，今天也为心动的小猫撑腰。</p>
+        </div>
+        <section class="ticket-wallet" aria-label="今日应援票">
+          <div class="wallet-icon"><i data-lucide="ticket" aria-hidden="true"></i></div>
+          <div class="wallet-content"><span>今日应援票</span><div><strong id="ticket-count">3</strong><span class="wallet-total"> / 3 张</span><span id="ticket-dots" aria-hidden="true"></span></div></div>
+          <button class="wallet-help icon-button" data-action="rules" aria-label="查看投票规则" data-tip="投票规则"><i data-lucide="circle-help" aria-hidden="true"></i></button>
+          <span class="wallet-refresh"><i data-lucide="rotate-cw" aria-hidden="true"></i>北京时间零点补充</span>
+        </section>
+      </section>
+
+      <div id="storage-warning" class="storage-warning" role="status" hidden>
+        <i data-lucide="triangle-alert" aria-hidden="true"></i><span>个性偏好或演示进度暂时无法保存；共享应援仍以服务端记录为准。</span>
+      </div>
+      <div id="connection-warning" class="storage-warning" role="status" hidden><i data-lucide="triangle-alert" aria-hidden="true"></i><span id="connection-message"></span><button class="subtle-button" data-action="reconnect"><i data-lucide="rotate-cw" aria-hidden="true"></i>重新连接</button></div>
+      <div class="mode-toolbar"><span id="mode-status" role="status">正在连接…</span><div><button class="subtle-button" id="demo-reset" data-action="reset-demo" hidden><i data-lucide="trash-2" aria-hidden="true"></i>重置演示</button><button class="subtle-button" id="mode-toggle" data-action="mode"><i data-lucide="flask-conical" aria-hidden="true"></i><span>演示模式</span></button></div></div>
+      <p id="demo-notice" class="demo-notice" hidden>当前为独立样例，票数、徽章与个人偏好不会写入共享记录。</p>
+
+      <section id="completion-summary" class="completion-summary" aria-labelledby="completion-title" hidden></section>
+
+      <div class="workspace">
+        <section class="main-section" aria-labelledby="section-title">
+          <div id="affinity-content"></div>
+          <div class="section-toolbar">
+            <div class="section-heading"><h2 id="section-title">本期候选喵</h2><span id="section-count" class="count-pill">06</span><span class="section-caption" id="section-caption">各有可爱，等你偏爱</span></div>
+            <label class="sort-control" id="sort-control"><i data-lucide="arrow-down-wide-narrow" aria-hidden="true"></i><span class="sr-only">猫咪排序</span><select id="sort-select"><option value="number">默认排序</option><option value="popular">人气优先</option></select><i data-lucide="chevron-down" aria-hidden="true"></i></label>
+          </div>
+          <div id="view-content"></div>
+        </section>
+        <aside class="sidebar" aria-label="人气与应援动态">
+          <section class="mini-ranking">
+            <div class="aside-heading"><h2><i data-lucide="trophy" aria-hidden="true"></i>累计人气榜</h2><span class="live-badge"><span></span>本机实时</span></div>
+            <div id="mini-ranking-list"></div>
+            <a href="#ranking" class="all-ranks">看看完整榜单<i data-lucide="arrow-right" aria-hidden="true"></i></a>
+          </section>
+          <section class="today-support" aria-labelledby="today-title">
+            <div class="aside-heading"><h2 id="today-title"><i data-lucide="heart" aria-hidden="true"></i>今日份偏爱</h2><span id="today-count">0 / 3</span></div>
+            <div id="today-list"></div>
+          </section>
+          <div class="sidebar-signoff"><i data-lucide="paw-print" aria-hidden="true"></i><p>你的每一份偏爱，<br />都让小猫的世界亮一点。</p><span>ALL CATS DESERVE LOVE</span></div>
+          <button class="rules-link" data-action="rules"><i data-lucide="circle-help" aria-hidden="true"></i>应援约定<i data-lucide="arrow-up-right" aria-hidden="true"></i></button>
+          <p class="data-note">初始票数为演示数据<br />应援记录仅保存在此浏览器</p>
+        </aside>
+      </div>
+      <footer class="site-footer"><div class="footer-brand"><i data-lucide="cat" aria-hidden="true"></i>只选可爱，不选烦恼。</div><div class="blind-box-words"><span>猫咪</span><b>×</b><span>投票器</span><b>×</b><span>可爱圆角风</span></div><span class="footer-edition">MADE FOR TRAE CITY DEMO</span></footer>
+    </main>
+
+    <dialog id="cat-dialog" class="cat-dialog" aria-labelledby="dialog-cat-name"><div id="cat-dialog-content"></div></dialog>
+    <dialog id="quiz-dialog" class="quiz-dialog" aria-labelledby="quiz-title"><div id="quiz-content"></div></dialog>
+    <dialog id="reset-dialog" class="reset-dialog" aria-labelledby="reset-title">
+      <span class="eyebrow">A FRESH LITTLE START</span><h2 id="reset-title">重新开始这场演示？</h2>
+      <p>仅重置本标签页的样例投票和个性偏好，正式共享记录与旧版本地历史不受影响。</p>
+      <div><button class="subtle-button" data-close="reset" autofocus>保留当前演示</button><button class="primary-button" data-action="confirm-reset"><i data-lucide="rotate-cw" aria-hidden="true"></i>确认重置</button></div>
+    </dialog>
+    <dialog id="souvenir-dialog" class="souvenir-dialog" aria-labelledby="souvenir-title">
+      <header class="souvenir-heading">
+        <div><span class="eyebrow">A LITTLE LOVE TO KEEP</span><h2 id="souvenir-title">今日份应援纪念</h2></div>
+        <button class="dialog-close icon-button" data-close="souvenir" aria-label="关闭应援纪念卡" data-tip="关闭"><i data-lucide="x" aria-hidden="true"></i></button>
+      </header>
+      <div class="souvenir-customization">
+        <fieldset class="theme-options"><legend>纪念色</legend><label class="theme-pink"><input type="radio" name="souvenir-theme" value="pink" /><span title="莓果粉"></span><b>粉</b></label><label class="theme-mint"><input type="radio" name="souvenir-theme" value="mint" /><span title="薄荷绿"></span><b>绿</b></label><label class="theme-yellow"><input type="radio" name="souvenir-theme" value="yellow" /><span title="奶油黄"></span><b>黄</b></label></fieldset>
+        <label class="slogan-field">应援宣言<select id="souvenir-slogan"></select></label>
+        <label class="souvenir-favorite" id="souvenir-favorite-control"><input type="checkbox" id="souvenir-show-favorite" />留下我的本命猫</label>
+      </div>
+      <div class="souvenir-preview-wrap" id="souvenir-stage" aria-busy="false">
+        <img id="souvenir-preview" width="900" height="1200" alt="" hidden />
+        <div class="souvenir-placeholder" id="souvenir-placeholder"><i data-lucide="image-down" aria-hidden="true"></i><span>正在装好今天的偏爱…</span></div>
+      </div>
+      <p id="souvenir-status" role="status" aria-live="polite"></p>
+      <footer class="souvenir-actions">
+        <span>本地应援纪念 · 非线上投票凭证</span>
+        <a id="souvenir-download" class="primary-button" hidden><i data-lucide="download" aria-hidden="true"></i>下载 PNG</a>
+        <button id="souvenir-retry" class="primary-button" hidden><i data-lucide="rotate-cw" aria-hidden="true"></i>重新生成</button>
+      </footer>
+    </dialog>
+    <dialog id="rules-dialog" class="rules-dialog" aria-labelledby="rules-title">
+      <button class="dialog-close icon-button" data-close="rules" aria-label="关闭应援约定" data-tip="关闭"><i data-lucide="x" aria-hidden="true"></i></button>
+      <span class="rules-illustration"><i data-lucide="ticket" aria-hidden="true"></i></span>
+      <span class="eyebrow">A LITTLE LOVE, EVERY DAY</span><h2 id="rules-title">可爱，也有小小约定</h2>
+      <ol class="rules-list"><li><b>01</b><div><strong>每天三份偏爱</strong><p>每个匿名身份每天 3 张应援票，同一只猫咪每天最多 1 票。</p></div></li><li><b>02</b><div><strong>明天，又是新的心动</strong><p>共享投票以服务端北京时间为准，零点更新额度，余票不累计。</p></div></li><li><b>03</b><div><strong>让偏爱相遇，也留好边界</strong><p>共享榜从零计票。清除 Cookie 或换浏览器无法找回身份，也可能重复参与；这不是实名防刷系统。趣味测试与本命猫只保存在本机，演示样例不计入共享榜。</p></div></li></ol>
+      <button class="primary-button rules-done" data-close="rules">约定好啦<i data-lucide="heart" aria-hidden="true"></i></button>
+    </dialog>
+    <div id="toast" class="toast" popover="manual" role="status" aria-live="polite" aria-atomic="true"></div>
+    <div id="celebration" class="celebration" aria-hidden="true"></div>
+    <noscript><p>请启用 JavaScript，与小猫们见面。</p></noscript>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,225 @@
+@media (min-width: 1025px) and (max-width: 1220px) {
+  .header-inner { padding-inline: 28px; gap: 16px; }
+  .page-shell { padding-inline: 28px; }
+  .header-end { gap: 10px; }
+  .workspace { grid-template-columns: minmax(0, 1fr) 238px; gap: 24px; }
+  .sidebar { padding-left: 20px; }
+  .cat-grid { gap: 16px 14px; }
+  .cat-card-content { padding-inline: 6px; }
+  .cat-name-row h3 > span { display: none; }
+  .vote-button { min-width: 86px; padding-inline: 9px; font-size: 10px; }
+  .vote-total strong { font-size: 15px; }
+  .cat-line { font-size: 9px; }
+  .section-caption { display: none; }
+}
+
+@media (max-width: 1024px) {
+  .header-inner { padding: 0 28px; height: 80px; gap: 16px; }
+  .brand strong { font-size: 17px; }
+  .brand-mark { width: 41px; height: 41px; }
+  .nav-link { padding-inline: 11px; font-size: 12px; }
+  .header-end .demo-label { display: none; }
+  .page-shell { padding: 0 28px; }
+  .intro { padding-top: 32px; }
+  .intro h1 { font-size: 30px; }
+  .intro h1 > svg { width: 20px; margin-left: 7px; }
+  .intro-copy > p { font-size: 11px; }
+  .ticket-wallet { width: 242px; padding-left: 15px; }
+  .wallet-refresh { left: 65px; }
+  .workspace { grid-template-columns: minmax(0, 1fr) 215px; gap: 22px; }
+  .cat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+  .sidebar { padding-left: 18px; }
+  .section-caption { display: none; }
+  .mini-rank-row { gap: 6px; }
+  .mini-rank-row > img { width: 34px; height: 34px; border-radius: 11px; }
+  .aside-heading h2 { font-size: 13px; gap: 5px; }
+  .live-badge { font-size: 7px; padding-inline: 5px; }
+  .mini-rank-info b { font-size: 10px; }
+  .today-cats { gap: 7px; }
+  .today-cat, .today-slot { width: calc((100% - 14px) / 3); }
+  .today-cat img, .today-slot > svg { width: 46px; height: 46px; }
+  .today-cat b { top: 30px; }
+  .footer-edition { display: none; }
+  .podium { gap: 8px; }
+  .podium-cat { padding: 16px 8px; }
+  .podium-cat.place-1 { padding-block: 24px; }
+  .podium-cat > button:not(.vote-button) { width: 84px; height: 84px; }
+  .podium-cat.place-1 > button:not(.vote-button) { width: 96px; height: 96px; }
+  .podium-cat .vote-button { min-width: 0; width: 100%; padding-inline: 5px; font-size: 10px; }
+  .ranking-table-head { grid-template-columns: 1fr 72px 96px; }
+  .ranking-row { grid-template-columns: 22px 1fr 72px 96px; gap: 8px; padding-inline: 0; }
+  .ranking-row-votes { font-size: 15px; }
+  .ranking-cat-name { gap: 8px; }
+}
+
+@media (max-width: 767px) {
+  .header-inner { flex-wrap: wrap; height: auto; padding: 16px 20px 0; gap: 14px; }
+  .brand { gap: 9px; }
+  .brand strong { font-size: 17px; }
+  .brand small { font-size: 8px; margin-top: 3px; }
+  .brand-mark { width: 39px; height: 39px; border-radius: 13px; }
+  .brand-mark svg { width: 27px; height: 27px; }
+  .header-end { margin-left: auto; }
+  .header-end .demo-label { display: flex; font-size: 9px; }
+  .visitor { display: none; }
+  .main-nav { width: 100%; order: 3; gap: 0; padding-bottom: 10px; justify-content: space-between; }
+  .nav-link { font-size: 12px; height: 37px; padding: 0 14px; }
+  .nav-link svg { width: 15px; height: 15px; }
+  .page-shell { padding: 0 20px; }
+  .intro { display: block; padding: 28px 0 26px; }
+  .edition { font-size: 10px; margin-bottom: 10px; }
+  .edition-year { font-size: 8px; }
+  .intro h1 { font-size: 28px; flex-wrap: wrap; }
+  .intro h1 > svg { width: 19px; height: 19px; margin-top: 0; }
+  .intro-copy > p { font-size: 11px; line-height: 1.8; max-width: 300px; margin-top: 7px; }
+  .ticket-wallet { margin-top: 23px; width: 100%; min-height: 80px; padding: 16px 18px; align-items: center; border-radius: 17px; gap: 12px; }
+  .wallet-icon { width: 36px; height: 36px; margin-top: 0; }
+  .wallet-content { display: flex; align-items: center; gap: 12px; flex: 1; }
+  .wallet-content > span { font-size: 11px; }
+  .wallet-content > div { margin-top: 0; }
+  .wallet-content strong { font-size: 29px; }
+  .wallet-refresh { left: auto; right: 16px; bottom: 14px; font-size: 8px; }
+  .wallet-help { right: 14px; top: 10px; }
+  #ticket-dots { margin-left: 8px; }
+  .workspace { display: flex; flex-direction: column; gap: 26px; }
+  .section-toolbar { margin-bottom: 16px; }
+  .section-heading h2 { font-size: 17px; }
+  .count-pill { height: 20px; min-width: 24px; font-size: 10px; }
+  .cat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px 12px; }
+  .cat-card { padding: 6px; border-radius: 20px; }
+  .cat-portrait { border-radius: 14px; }
+  .cat-card-content { padding: 12px 5px 6px; }
+  .cat-name-row { flex-wrap: wrap; gap: 7px; }
+  .cat-name-row h3 { font-size: 18px; gap: 6px; }
+  .cat-name-row h3 > span { font-size: 7px; }
+  .personality { font-size: 8px; padding: 3px 5px; }
+  .cat-meta { font-size: 9px; margin-top: 6px; }
+  .cat-meta > span { padding-inline: 4px; }
+  .cat-line { font-size: 9px; white-space: normal; margin: 10px 0; min-height: 30px; }
+  .card-vote-row { flex-wrap: wrap; gap: 10px; padding-top: 10px; }
+  .vote-total strong { font-size: 17px; }
+  .card-vote-row .vote-button { width: 100%; min-height: 35px; font-size: 11px; }
+  .portrait-badge { font-size: 8px; top: 8px; left: 8px; padding-inline: 6px; height: 23px; }
+  .portrait-open { width: 24px; height: 24px; right: 7px; top: 7px; }
+  .portrait-open svg { width: 14px; }
+  .list-end { padding-top: 25px; }
+  .sidebar { border-left: 0; padding-left: 0; border-top: 1px solid #e9e4ec; padding-top: 17px; display: grid; grid-template-columns: 1fr 1fr; column-gap: 24px; }
+  .mini-ranking { grid-column: 1; grid-row: 1 / span 3; }
+  .today-support { grid-column: 2; padding-top: 0; }
+  .sidebar-signoff { grid-column: 2; padding-block: 18px; }
+  .rules-link { grid-column: 2; }
+  .data-note { grid-column: 1 / -1; margin-top: 18px; padding-top: 15px; border-top: 1px solid #eee7f0; }
+  .data-note br { display: none; }
+  .aside-heading h2 { font-size: 13px; }
+  .live-badge { display: none; }
+  .mini-rank-row { padding-block: 9px; }
+  .rank-number { font-size: 10px; width: 14px; }
+  .rank-number svg { width: 14px; }
+  .mini-rank-info strong { font-size: 11px; }
+  .mini-rank-info b { font-size: 9px; }
+  .mini-rank-info small { display: none; }
+  .mini-rank-row > img { width: 31px; height: 31px; border-radius: 10px; }
+  .rank-track { height: 3px; margin-top: 7px; }
+  .all-ranks { font-size: 9px; padding-bottom: 12px; }
+  .today-cats { flex-wrap: wrap; gap: 10px; justify-content: center; }
+  .today-cat, .today-slot { width: 43px; }
+  .today-cat img, .today-slot > svg { width: 40px; height: 40px; }
+  .today-slot > svg { padding: 11px; }
+  .today-cat b { top: 26px; right: -1px; }
+  .today-message { font-size: 9px; margin-block: 12px; }
+  .today-empty p { font-size: 10px; }
+  .today-empty > span { font-size: 8px; }
+  .sidebar-signoff p { font-size: 10px; }
+  .sidebar-signoff > span { font-size: 6px; }
+  .sidebar-signoff > svg { width: 20px; height: 20px; margin-bottom: 8px; }
+  .site-footer { margin-top: 20px; padding: 23px 0; flex-direction: column; gap: 14px; }
+  .footer-brand { font-size: 10px; }
+  .blind-box-words { font-size: 8px; }
+  .footer-edition { display: block; font-size: 7px; }
+  .empty-support { min-height: 470px; }
+  .empty-support h3 { font-size: 20px; }
+  .ranking-summary { flex-wrap: wrap; padding-bottom: 18px; margin-bottom: 16px; }
+  .ranking-summary > span:first-child { font-size: 10px; gap: 5px; }
+  .ranking-summary strong { font-size: 20px; }
+  .demo-data-badge { font-size: 8px; }
+  .podium { gap: 8px; padding-top: 14px; }
+  .podium-cat { padding: 15px 6px 12px; border-radius: 17px; }
+  .podium-cat.place-1 { padding-block: 23px; }
+  .podium-cat > button:not(.vote-button) { width: 72px; height: 72px; }
+  .podium-cat.place-1 > button:not(.vote-button) { width: 82px; height: 82px; }
+  .podium-place { font-size: 10px; gap: 3px; margin-bottom: 12px; }
+  .podium-place svg { width: 15px; height: 15px; }
+  .podium-cat h3 { font-size: 17px; }
+  .podium-personality { font-size: 8px; }
+  .podium-cat > p strong { font-size: 20px; }
+  .podium-cat .vote-button { padding: 8px 4px; min-height: 32px; font-size: 9px; gap: 3px; }
+  .podium-cat .vote-button svg { width: 11px; height: 11px; }
+  .ranking-table-head { grid-template-columns: 1fr 58px 88px; padding-inline: 0; gap: 8px; font-size: 9px; }
+  .ranking-row { grid-template-columns: 18px 1fr 58px 88px; gap: 7px; }
+  .ranking-cat-name img { width: 36px; height: 36px; border-radius: 11px; }
+  .ranking-cat-name strong { font-size: 13px; }
+  .ranking-cat-name small { font-size: 8px; margin-top: 5px; }
+  .ranking-position { font-size: 11px; }
+  .ranking-row-votes { font-size: 13px; }
+  .ranking-row-votes small { font-size: 8px; margin-left: 3px; }
+  .ranking-row > .vote-button { min-width: 0; padding: 8px 4px; gap: 3px; font-size: 9px; min-height: 32px; }
+  .ranking-row > .vote-button svg { width: 11px; height: 11px; }
+  .cat-dialog { width: calc(100% - 32px); max-width: 420px; }
+  .detail-layout { display: block; }
+  .detail-portrait { height: 235px; }
+  .detail-portrait img { width: 235px; height: 235px; margin-inline: auto; }
+  .detail-number { left: 18px; bottom: 14px; font-size: 7px; }
+  .detail-content { padding: 24px 23px; }
+  .detail-content h2 { font-size: 27px; margin-top: 10px; }
+  .detail-motto { margin-top: 18px; font-size: 13px; }
+  .detail-story { font-size: 12px; }
+  .detail-stats { margin-block: 20px; }
+  .rules-dialog { padding: 30px 24px 24px; }
+  .rules-dialog h2 { font-size: 20px; }
+  .toast { bottom: 20px; padding: 12px 17px; font-size: 11px; }
+}
+
+@media (max-width: 374px) {
+  .header-inner { padding-inline: 15px; }
+  .page-shell { padding-inline: 15px; }
+  .brand strong { font-size: 16px; }
+  .header-end .demo-label { font-size: 8px; }
+  .nav-link { padding-inline: 10px; font-size: 11px; }
+  .intro h1 { font-size: 24px; }
+  .intro h1 > svg { width: 16px; margin-left: 5px; }
+  .edition-year { display: none; }
+  .ticket-wallet { padding-inline: 13px; }
+  .wallet-content { gap: 7px; }
+  .wallet-content > span { font-size: 10px; }
+  #ticket-dots { margin-left: 6px; gap: 2px; }
+  #ticket-dots svg { width: 11px; }
+  .wallet-refresh { right: 11px; font-size: 7px; }
+  .cat-name-row h3 > span { display: none; }
+  .cat-name-row { gap: 5px; }
+  .cat-name-row h3 { font-size: 17px; }
+  .cat-name-row .personality { font-size: 7px; padding: 3px 4px; }
+  .cat-line { font-size: 8px; }
+  .sidebar { column-gap: 15px; }
+  .mini-rank-row { gap: 5px; }
+  .mini-rank-row > img { width: 27px; height: 27px; }
+  .mini-rank-info strong { font-size: 10px; }
+  .mini-rank-info b { font-size: 8px; }
+  .aside-heading h2 { font-size: 12px; }
+  .aside-heading h2 svg { width: 14px; }
+  .ranking-summary strong { font-size: 18px; }
+  .podium-cat > button:not(.vote-button) { width: 64px; height: 64px; }
+  .podium-cat.place-1 > button:not(.vote-button) { width: 72px; height: 72px; }
+  .podium-cat > p strong { font-size: 18px; }
+  .podium-cat .vote-button { font-size: 8px; }
+  .podium-cat .vote-button svg { display: none; }
+  .ranking-table-head { grid-template-columns: 1fr 44px 79px; }
+  .ranking-row { grid-template-columns: 15px 1fr 44px 79px; gap: 5px; }
+  .ranking-cat-name { gap: 6px; }
+  .ranking-cat-name img { width: 29px; height: 29px; }
+  .ranking-row > .vote-button { font-size: 8px; }
+  .ranking-row > .vote-button svg { width: 9px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
